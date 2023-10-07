@@ -1,10 +1,8 @@
 import csv
 
 def main():
-    pantry = load_pantry()
-    recipe = load_recipe()
-    compare(pantry, recipe)
-    buy("honey")
+    print(use_up())
+
 
 def load_pantry():
     file = open("pantry.csv", "r")
@@ -66,6 +64,30 @@ def buy(ingredient):
         file.write(item + ",")
 
 
+def fridge_list():
+    file = open("fridge.csv", "r")
+    data = list(csv.reader(file, delimiter=","))[0]
+    return data
+
+
+def use_up():
+    file = open("fridge.csv", "r")
+    fridge = list(csv.reader(file, delimiter=","))[0]
+    file = open("data.csv", "r")
+    done = list(csv.reader(file, delimiter=","))[0]
+    result = []
+
+    for word in fridge:
+        if word in done:
+            print(word)
+        else:
+            result.append(word)
+
+    file = open("fridge.csv", "w")
+    for word in result:
+        file.write(word + ",")
+
+    return result
 
 
 

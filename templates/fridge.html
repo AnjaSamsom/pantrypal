@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>PantryPal</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css" type="text/css">
+</head>
+
+<body>
+    <h1>PantryPal</h1>
+    <h2>Fridge</h2>
+
+    {%for line in data%}
+    <p>{{line}}
+    <p>
+    {%endfor%}
+
+    <form action="write_data.py" method="post">
+        Type the ingredients that are used up:<br>
+        <input type="text" name="text"><br>
+        <input type="submit" name="submit">
+    </form>
+
+</body>
+
+</html>
+
+
+
+
+
+

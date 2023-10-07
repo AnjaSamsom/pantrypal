@@ -1,0 +1,37 @@
+:root{
+    --text_light: #FDFFFC;
+    --background: #F5EE9E;
+    --text_dark: #246EB9;
+    --buttons:#4CB944;
+}
+
+html{
+    background-color: var(--background);
+}
+
+body{
+    color: var(--text_dark);
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+h1{
+    font-size: 4.5em;
+}
+
+.submit{
+    background-color: var(--buttons);
+    color: var(--text_light);
+    border: none;
+    border-radius: 4px;
+    height: 50px;
+    width: 200px;
+    font-size: 1.2em;
+
+}
+
+#username, #password, .label{
+    font-size: 1.5em;
+}
+
+
