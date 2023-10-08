@@ -10,26 +10,17 @@
 </head>
 
 <body>
-    <h1>PantryPal</h1>
+    <a href="/">PantryPal</a>
     <h2>Fridge</h2>
-
     {%for line in data%}
     <p>{{line}}
     <p>
-    {%endfor%}
-
-    <form action="write_data.py" method="post">
-        Type the ingredients that are used up:<br>
+        {%endfor%}
+    <form action="write_data_use_up.py" method="post">
+        Type the ingredients that you have purchased:<br>
         <input type="text" name="text"><br>
         <input type="submit" name="submit">
     </form>
-
 </body>
 
 </html>
-
-
-
-
-
-

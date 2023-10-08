@@ -1,9 +1,58 @@
 import csv
 
 def main():
-    print(use_up())
+    print("anja")
 
 
+def list(filename):
+    file = open(filename, "r")
+    data = list(csv.reader(file, delimiter=","))[0]
+    file.close()
+    return data
+
+
+def use_up():
+    file = open("fridge.csv", "r")
+    fridge = list(csv.reader(file, delimiter=","))[0]
+    file = open("data.csv", "r")
+    done = list(csv.reader(file, delimiter=","))[0]
+    result = []
+
+    for word in fridge:
+        if word in done:
+            print(word)
+        else:
+            result.append(word)
+
+    file = open("fridge.csv", "w")
+    for word in result:
+        file.write(word + ",")
+
+    file.close()
+
+    return result
+
+def add():
+    file = open("shopping_list.csv", "r")
+    shopping_list = list(csv.reader(file, delimiter=","))[0]
+    file = open("data.csv", "r")
+    data = list(csv.reader(file, delimiter=","))[0]
+    result = []
+
+    for word in data:
+        result.append(word)
+
+    file = open("shopping_list.csv", "a")
+    for word in result:
+        file.write(word + ",")
+
+    file.close()
+
+    return result
+
+
+
+""" 
 def load_pantry():
     file = open("pantry.csv", "r")
     data = list(csv.reader(file, delimiter=","))[0]
@@ -41,54 +90,6 @@ def compare(pantry, recipe):
 def add_to_list(ingredient):
     file = open("shopping_list.csv", "a")
     file.write(ingredient+",")
-
-def buy(ingredient):
-    file = open("pantry.csv", "a")
-    file.write(ingredient+",")
-
-
-    file = open("shopping_list.csv", "r")
-    data = list(csv.reader(file, delimiter=","))[0]
-
-    for item in data:
-        if item == ingredient:
-            item = ""
-
-    print(data)
-
-    file = open("shopping_list.csv", "w")
-    file.write("")
-    file = open("shopping_list.csv", "a")
-
-    for item in data:
-        file.write(item + ",")
-
-
-def fridge_list():
-    file = open("fridge.csv", "r")
-    data = list(csv.reader(file, delimiter=","))[0]
-    return data
-
-
-def use_up():
-    file = open("fridge.csv", "r")
-    fridge = list(csv.reader(file, delimiter=","))[0]
-    file = open("data.csv", "r")
-    done = list(csv.reader(file, delimiter=","))[0]
-    result = []
-
-    for word in fridge:
-        if word in done:
-            print(word)
-        else:
-            result.append(word)
-
-    file = open("fridge.csv", "w")
-    for word in result:
-        file.write(word + ",")
-
-    return result
-
-
+    file.close() """
 
 main()
