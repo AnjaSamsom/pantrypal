@@ -4,12 +4,17 @@ def main():
     print("anja")
 
 
-def list(filename):
-    file = open(filename, "r")
+def fridge_list():
+    file = open("fridge.csv", "r")
     data = list(csv.reader(file, delimiter=","))[0]
     file.close()
     return data
 
+def store_list():
+    file = open("shopping_list.csv", "r")
+    data = list(csv.reader(file, delimiter=","))[0]
+    file.close()
+    return data
 
 def use_up():
     file = open("fridge.csv", "r")

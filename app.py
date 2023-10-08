@@ -23,7 +23,7 @@ def home():
 
 @app.route("/fridge", methods=['GET', 'POST'])
 def fridge():
-    data = list("fridge.csv")
+    data = fridge_list()
     return render_template('fridge.html', data = data)
 
 @app.route("/write_data_use_up.py", methods=["POST"])
@@ -36,12 +36,14 @@ def write_data_use_up():
     file.close()
 
     data = use_up()
+
+
     return render_template('fridge.html', data = data)
 
 
-""" @app.route("/shopping_list", methods=['GET', 'POST'])
+@app.route("/shopping_list", methods=['GET', 'POST'])
 def shopping_list():
-    data = list("shopping_list.csv")
+    data = store_list()
     return render_template('shopping_list.html', data = data)
 
 @app.route("/write_data_add.py", methods=["POST"])
@@ -54,4 +56,4 @@ def write_data_add():
     file.close()
 
     data = add()
-    return render_template('shopping_list.html', data = data) """
+    return render_template('shopping_list.html', data = data)
