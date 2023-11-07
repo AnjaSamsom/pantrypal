@@ -10,14 +10,17 @@
 </head>
 
 <body>
-    <a href="/">PantryPal</a>
+    <form action="/home" method="POST">
+        <input type="image" src="static/logo.png" name="logo" />
+    </form>
+
     <h2>Fridge</h2>
     {%for line in data%}
     <p>{{line}}
     <p>
         {%endfor%}
     <form action="write_data_use_up.py" method="post">
-        Type the ingredients that you have purchased:<br>
+        Type the ingredients that you have used up:<br>
         <input type="text" name="text"><br>
         <input type="submit" name="submit">
     </form>

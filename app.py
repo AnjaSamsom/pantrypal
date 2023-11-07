@@ -20,6 +20,11 @@ def home():
     elif request.method == 'GET':
         return render_template('login.html')
     
+@app.route("/home", methods=['GET', 'POST'])
+def homepage():
+    return render_template('home.html')
+
+    
 
 @app.route("/fridge", methods=['GET', 'POST'])
 def fridge():
