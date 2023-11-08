@@ -56,3 +56,13 @@ def write_data_add():
     data = add_no_duplicates("shopping_list.csv", text)
 
     return render_template('shopping_list.html', data = data)
+
+@app.route("/remove.py", methods=["POST"])
+def remove():
+    text = request.form.get("text")
+
+
+    data = remove_ingredient("shopping_list.csv", text)
+
+    return render_template('shopping_list.html', data = data)
+

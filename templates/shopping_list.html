@@ -14,7 +14,9 @@
     <form action="/home" method="POST">
         <input type="image" src="static/logo.png" name="logo" />
     </form>
-    <h2>Shopping Cart</h2>
+    <h2>Shopping List</h2>
+
+    <h3>ADD INGREDIENTS TO YOUR LIST</h3>
 
     {%for line in data%}
     <p>{{line}}
@@ -23,6 +25,15 @@
 
     <form action="write_data_add.py" method="post">
         Type the ingredients to add:<br>
+        <input type="text" name="text"><br>
+        <input type="submit" name="submit">
+    </form>
+
+
+    <h3>REMOVE INGREDIENTS THAT YOU HAVE BOUGHT</h3>
+
+    <form action="remove.py" method="post">
+        Type the ingredients to remove:<br>
         <input type="text" name="text"><br>
         <input type="submit" name="submit">
     </form>

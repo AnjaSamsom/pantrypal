@@ -1,7 +1,7 @@
 import csv
 
 def main():
-    add_no_duplicates("shopping_list.csv", "peppers")
+    remove_ingredient("shopping_list.csv", "coffee")
 
 
 def fridge_list():
@@ -71,6 +71,27 @@ def add_no_duplicates(filename, text):
     file.close()
 
     return no_duplicates_list
+
+def remove_ingredient(filename, text):
+    file = open(filename, "r")
+    datalist = list(csv.reader(file, delimiter=","))[0]
+    file.close()
+
+
+
+    for word in datalist: # iterating on a copy since removing will mess things up
+        if word == text:
+            datalist.remove(text)
+
+
+    file = open(filename, "w")
+    for item in datalist:
+        file.write(item + ",")
+    file.close()
+
+    return datalist
+
+
 
 
 
