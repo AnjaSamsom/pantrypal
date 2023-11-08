@@ -63,6 +63,8 @@ def remove():
 
 
     data = remove_ingredient("shopping_list.csv", text)
+    # then add this ingredient to the fridge
+    add_no_duplicates("fridge.csv", text)
 
     return render_template('shopping_list.html', data = data)
 
