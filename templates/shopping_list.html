@@ -11,7 +11,9 @@
 </head>
 
 <body>
-    <a href="/">PantryPal</a>
+    <form action="/home" method="POST">
+        <input type="image" src="static/logo.png" name="logo" />
+    </form>
     <h2>Shopping Cart</h2>
 
     {%for line in data%}

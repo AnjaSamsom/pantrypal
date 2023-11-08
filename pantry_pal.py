@@ -1,7 +1,7 @@
 import csv
 
 def main():
-    print("anja")
+    add_no_duplicates("shopping_list.csv", "peppers")
 
 
 def fridge_list():
@@ -37,7 +37,7 @@ def use_up():
 
     return result
 
-def add():
+""" def add():
     file = open("shopping_list.csv", "r")
     shopping_list = list(csv.reader(file, delimiter=","))[0]
     file = open("data.csv", "r")
@@ -53,10 +53,29 @@ def add():
 
     file.close()
 
-    return result
+    return result """
+
+
+def add_no_duplicates(filename, text):
+    file = open(filename, "r")
+    datalist = list(csv.reader(file, delimiter=","))[0]
+    file.close()
+
+    datalist.append(text)
+
+    no_duplicates_list = list(set(datalist))
+
+    file = open(filename, "w")
+    for item in no_duplicates_list:
+        file.write(item + ",")
+    file.close()
+
+    return no_duplicates_list
 
 
 
+
+    
 """ 
 def load_pantry():
     file = open("pantry.csv", "r")

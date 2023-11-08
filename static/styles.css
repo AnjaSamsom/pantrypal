@@ -1,6 +1,6 @@
 :root{
     --text_light: #FDFFFC;
-    --background: #F5EE9E;
+    --background: #FDFFFC;
     --text_dark: #246EB9;
     --buttons:#4CB944;
 }
@@ -13,6 +13,8 @@ body{
     color: var(--text_dark);
     font-family: "Poppins", sans-serif;
     text-align: center;
+    background-image: url("background.png");
+
 }
 
 h1, a{

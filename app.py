@@ -41,8 +41,6 @@ def write_data_use_up():
     file.close()
 
     data = use_up()
-
-
     return render_template('fridge.html', data = data)
 
 
@@ -55,10 +53,6 @@ def shopping_list():
 def write_data_add():
     text = request.form.get("text")
 
-    file = open("data.csv", "a")
+    data = add_no_duplicates("shopping_list.csv", text)
 
-    file.write(text + ",")
-    file.close()
-
-    data = add()
     return render_template('shopping_list.html', data = data)
