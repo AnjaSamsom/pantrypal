@@ -31,6 +31,10 @@ def fridge():
     data = fridge_list()
     return render_template('fridge.html', data = data)
 
+@app.route("/cookbook", methods=['GET', 'POST'])
+def cookbook():
+    return render_template('cookbook.html')
+
 @app.route("/write_data_use_up.py", methods=["POST"])
 def write_data_use_up():
     text = request.form.get("text")
