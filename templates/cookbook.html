@@ -32,7 +32,9 @@
                 <p>
                 {%endfor%}
 
-
+                <form action="add_list.py" method="post">
+                    <input class = "submit" type="submit" name="submit" value = "Add ingredients to list">
+                </form>
 
             </div>
             <img class="img1" src="static/broccoli_coconut_noodles.jpg">
@@ -42,6 +44,17 @@
         <div class="recipe2">
             <div class="info2">
                 <h2>Chicken Marsala Pasta</h2>
+                <h4>You have these ingredients in your kitchen:</h4>
+                {%for line in r2h%}
+                <p>{{line}}
+                <p>
+                {%endfor%}
+
+                <h4>And must purchase these ingredients to make the dish:</h4>
+                {%for line in r2d%}
+                <p>{{line}}
+                <p>
+                {%endfor%}
 
             </div>
             <img class="img2" src="static/chicken_marsala_pasta.jpg">
@@ -51,6 +64,17 @@
         <div class="recipe3">
             <div class="info3">
                 <h2>Fried Rice with Salad</h2>
+                <h4>You have these ingredients in your kitchen:</h4>
+                {%for line in r3h%}
+                <p>{{line}}
+                <p>
+                {%endfor%}
+
+                <h4>And must purchase these ingredients to make the dish:</h4>
+                {%for line in r3d%}
+                <p>{{line}}
+                <p>
+                {%endfor%}
 
             </div>
             <img class="img3" src="static/fried_rice_with_salad.jpg">
@@ -61,6 +85,18 @@
             <div class="info4">
                 <h2>Honey Lemon Salmon</h2>
 
+                <h4>You have these ingredients in your kitchen:</h4>
+                {%for line in r4h%}
+                <p>{{line}}
+                <p>
+                {%endfor%}
+
+                <h4>And must purchase these ingredients to make the dish:</h4>
+                {%for line in r4d%}
+                <p>{{line}}
+                <p>
+                {%endfor%}
+
 
             </div>
             <img class="img4" src="static/honey_lemon_salmon.jpg">
@@ -70,6 +106,18 @@
         <div class="recipe5">
             <div class="info5">
                 <h2>Spicy Peanut Noodles</h2>
+
+                <h4>You have these ingredients in your kitchen:</h4>
+                {%for line in r5h%}
+                <p>{{line}}
+                <p>
+                {%endfor%}
+
+                <h4>And must purchase these ingredients to make the dish:</h4>
+                {%for line in r5d%}
+                <p>{{line}}
+                <p>
+                {%endfor%}
   
 
             </div>

@@ -46,10 +46,7 @@ h1, a{
       "recipe2"
       "recipe3"
       "recipe4"
-      "recipe-5";
-
-    padding: 20px;
-    margin:auto;
+      "recipe5";
   }
   
   .recipe2 {  display: grid;
@@ -94,14 +91,14 @@ h1, a{
   
   .img4 { grid-area: img4; }
   
-  .recipe-5 {  display: grid;
+  .recipe5 {  display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "info5 img5";
-    grid-area: recipe-5;
+    grid-area: recipe5;
   }
   
   .info5 { grid-area: info5; }
@@ -124,13 +121,13 @@ h1, a{
 
 
 .img1, .img2, .img3, .img4, .img5{
-    width:200px;
+    width:300px;
 }
 
 
 .recipe1, .recipe2, .recipe3, .recipe4, .recipe5{
   border-style: solid;
-  padding: 40px;
+  padding: 20px;
   border-radius: 30px;
   border: 8px solid var(--text_dark);
 }
