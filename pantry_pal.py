@@ -1,7 +1,7 @@
 import csv
 
 def main():
-    remove_ingredient("shopping_list.csv", "coffee")
+    print("anja")
 
 
 def fridge_list():
@@ -92,7 +92,31 @@ def remove_ingredient(filename, text):
     return datalist
 
 
+def compare(recipe_name):
+    file = open("fridge.csv", "r")
+    fridge = list(csv.reader(file, delimiter=","))[0]
+    file.close()
+    file = open(recipe_name, "r")
+    recipe = list(csv.reader(file, delimiter=","))[0]
 
+    common = list(set(fridge) & set(recipe))
+    dont_have = list(set(recipe) - set(fridge))
+
+    have_and_dont = []
+
+    
+
+    have_and_dont.append("Yay! You have: ")
+    for ingredient in common:
+        have_and_dont.append(ingredient)
+        print(ingredient)
+    have_and_dont.append(" ")
+    have_and_dont.append("To make this recipe you need to buy: ")
+    for ingredient in dont_have:
+        #add_to_list(ingredient)
+        have_and_dont.append(ingredient)
+
+    print(have_and_dont)
 
 
 
@@ -116,20 +140,7 @@ def load_recipe():
 
     return data
     
-def compare(pantry, recipe):
 
-    common = list(set(pantry) & set(recipe))
-    dont_have = list(set(recipe) - set(pantry))
-
-    print("Yay! You have: ")
-    for ingredient in common:
-        print(ingredient)
-    print()
-    print("To make this recipe you need to buy: ")
-    for ingredient in dont_have:
-        add_to_list(ingredient)
-        print(ingredient)
-    print("They have been added to your shopping list!")
 
 
 def add_to_list(ingredient):

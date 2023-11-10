@@ -33,6 +33,13 @@ def fridge():
 
 @app.route("/cookbook", methods=['GET', 'POST'])
 def cookbook():
+    r1 = compare("recipes/broccoli_coconut_noodles.csv")
+    r2 = compare("recipes/chicken_marsala_pasta.csv")
+    r3 = compare("recipes/fried_rice.csv")
+    r4 = compare("recipes/salmon.csv")
+    r5 = compare("recipes/spicy_noodles.csv")
+    #return render_template('cookbook.html', r1 = r1, r2 = r2, r3 = r3, r4 = r4, r5 = r5)
+
     return render_template('cookbook.html')
 
 @app.route("/write_data_use_up.py", methods=["POST"])

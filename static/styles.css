@@ -47,6 +47,9 @@ h1, a{
       "recipe3"
       "recipe4"
       "recipe-5";
+
+    padding: 20px;
+    margin:auto;
   }
   
   .recipe2 {  display: grid;
@@ -122,6 +125,14 @@ h1, a{
 
 .img1, .img2, .img3, .img4, .img5{
     width:200px;
+}
+
+
+.recipe1, .recipe2, .recipe3, .recipe4, .recipe5{
+  border-style: solid;
+  padding: 40px;
+  border-radius: 30px;
+  border: 8px solid var(--text_dark);
 }
   
 
