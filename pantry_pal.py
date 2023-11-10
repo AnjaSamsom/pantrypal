@@ -104,19 +104,19 @@ def compare(recipe_name):
 
     have_and_dont = []
 
+
     
 
     have_and_dont.append("Yay! You have: ")
     for ingredient in common:
         have_and_dont.append(ingredient)
-        print(ingredient)
     have_and_dont.append(" ")
     have_and_dont.append("To make this recipe you need to buy: ")
     for ingredient in dont_have:
         #add_to_list(ingredient)
         have_and_dont.append(ingredient)
 
-    print(have_and_dont)
+    return have_and_dont
 
 
 

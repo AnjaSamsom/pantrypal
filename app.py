@@ -38,7 +38,10 @@ def cookbook():
     r3 = compare("recipes/fried_rice.csv")
     r4 = compare("recipes/salmon.csv")
     r5 = compare("recipes/spicy_noodles.csv")
-    #return render_template('cookbook.html', r1 = r1, r2 = r2, r3 = r3, r4 = r4, r5 = r5)
+    print("r1")
+    print(type(r1))
+
+    return render_template('cookbook.html', r1 = r1, r2 = r2, r3 = r3, r4 = r4, r5 = r5)
 
     return render_template('cookbook.html')
 
