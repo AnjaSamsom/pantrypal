@@ -14,16 +14,25 @@
     <form action="/home" method="POST">
         <input type="image" src="static/logo.png" name="logo" />
     </form>
-    <h1>ANJANJA</h1>
+    <h1>Cookbook!</h1>
     <div class="container">
 
         <div class="recipe1">
             <div class="info1">
                 <h2>Broccoli Coconut Noodles</h2>
-                {%for line in r1%}
+                <h4>You have these ingredients in your kitchen:</h4>
+                {%for line in r1h%}
                 <p>{{line}}
                 <p>
                 {%endfor%}
+
+                <h4>And must purchase these ingredients to make the dish:</h4>
+                {%for line in r1d%}
+                <p>{{line}}
+                <p>
+                {%endfor%}
+
+
 
             </div>
             <img class="img1" src="static/broccoli_coconut_noodles.jpg">
@@ -33,10 +42,7 @@
         <div class="recipe2">
             <div class="info2">
                 <h2>Chicken Marsala Pasta</h2>
-                {%for line in r2%}
-                <p>{{line}}
-                <p>
-                {%endfor%}
+
             </div>
             <img class="img2" src="static/chicken_marsala_pasta.jpg">
 
@@ -45,10 +51,7 @@
         <div class="recipe3">
             <div class="info3">
                 <h2>Fried Rice with Salad</h2>
-                {%for line in r3%}
-                <p>{{line}}
-                <p>
-                {%endfor%}
+
             </div>
             <img class="img3" src="static/fried_rice_with_salad.jpg">
 
@@ -57,10 +60,7 @@
         <div class="recipe4">
             <div class="info4">
                 <h2>Honey Lemon Salmon</h2>
-                {%for line in r4%}
-                <p>{{line}}
-                <p>
-                {%endfor%}
+
 
             </div>
             <img class="img4" src="static/honey_lemon_salmon.jpg">
@@ -70,10 +70,7 @@
         <div class="recipe5">
             <div class="info5">
                 <h2>Spicy Peanut Noodles</h2>
-                {%for line in r5%}
-                <p>{{line}}
-                <p>
-                {%endfor%}
+  
 
             </div>
             <img class="img5" src="static/spicy_peanut_noodles.jpg">

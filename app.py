@@ -33,17 +33,14 @@ def fridge():
 
 @app.route("/cookbook", methods=['GET', 'POST'])
 def cookbook():
+    print("in cookbook")
     r1 = compare("recipes/broccoli_coconut_noodles.csv")
-    r2 = compare("recipes/chicken_marsala_pasta.csv")
-    r3 = compare("recipes/fried_rice.csv")
-    r4 = compare("recipes/salmon.csv")
-    r5 = compare("recipes/spicy_noodles.csv")
+    r1h = r1[0] #recipe 1 have
+    r1d = r1[1] #recipe 1 don't have
     print("r1")
-    print(type(r1))
+    print(r1h)
 
-    return render_template('cookbook.html', r1 = r1, r2 = r2, r3 = r3, r4 = r4, r5 = r5)
-
-    return render_template('cookbook.html')
+    return render_template('cookbook.html', r1h = r1h, r1d = r1d)
 
 @app.route("/write_data_use_up.py", methods=["POST"])
 def write_data_use_up():

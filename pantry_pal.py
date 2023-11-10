@@ -3,7 +3,6 @@ import csv
 def main():
     print("anja")
 
-
 def fridge_list():
     file = open("fridge.csv", "r")
     data = list(csv.reader(file, delimiter=","))[0]
@@ -102,21 +101,18 @@ def compare(recipe_name):
     common = list(set(fridge) & set(recipe))
     dont_have = list(set(recipe) - set(fridge))
 
-    have_and_dont = []
-
-
+    have = []
+    dont = []
     
 
-    have_and_dont.append("Yay! You have: ")
     for ingredient in common:
-        have_and_dont.append(ingredient)
-    have_and_dont.append(" ")
-    have_and_dont.append("To make this recipe you need to buy: ")
+        have.append(ingredient)
+
     for ingredient in dont_have:
         #add_to_list(ingredient)
-        have_and_dont.append(ingredient)
+        dont.append(ingredient)
 
-    return have_and_dont
+    return (have, dont)
 
 
 
