@@ -61,10 +61,10 @@ def cookbook():
 def add_list():
     # WORKING HERE
 
+    #specifiy a method that calls another method, that method does all the work, the first one just specifies which recipe csv to use
+
 
     return render_template('home.html')
-
-
 
 
 @app.route("/write_data_use_up.py", methods=["POST"])
