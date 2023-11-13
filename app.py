@@ -3,6 +3,8 @@ from pantry_pal import *
 
 app = Flask(__name__)
 
+# note: MVP done 11/13 8:26 am
+
 
 # run this with flask --app app run
 
