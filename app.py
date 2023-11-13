@@ -57,14 +57,50 @@ def cookbook():
 
 
 
-@app.route("/add_list.py", methods=["POST"])
-def add_list():
-    # WORKING HERE
+@app.route("/add_list1.py", methods=["POST"])
+def add_list1():
+    recipe = compare("recipes/broccoli_coconut_noodles.csv")
+    dont_have = recipe[1]
+    add_remaining_ingredients(dont_have)
 
     #specifiy a method that calls another method, that method does all the work, the first one just specifies which recipe csv to use
 
+    return render_template('home.html')
+
+@app.route("/add_list2.py", methods=["POST"])
+def add_list2():
+    recipe = compare("recipes/chicken_marsala_pasta.csv")
+    dont_have = recipe[1]
+    add_remaining_ingredients(dont_have)
+
 
     return render_template('home.html')
+
+@app.route("/add_list3.py", methods=["POST"])
+def add_list3():
+    recipe = compare("recipes/fried_rice.csv")
+    dont_have = recipe[1]
+    add_remaining_ingredients(dont_have)
+
+    return render_template('home.html')
+
+@app.route("/add_list4.py", methods=["POST"])
+def add_list4():
+    recipe = compare("recipes/salmon.csv")
+    dont_have = recipe[1]
+    add_remaining_ingredients(dont_have)
+
+
+    return render_template('home.html')
+
+@app.route("/add_list5.py", methods=["POST"])
+def add_list5():
+    recipe = compare("recipes/spicy_noodles.csv")
+    dont_have = recipe[1]
+    add_remaining_ingredients(dont_have)
+
+    return render_template('home.html')
+
 
 
 @app.route("/write_data_use_up.py", methods=["POST"])

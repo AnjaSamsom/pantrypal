@@ -115,6 +115,11 @@ def compare(recipe_name):
     return (have, dont)
 
 
+def add_remaining_ingredients(recipe):
+    print(recipe)
+    for item in recipe:
+        add_no_duplicates("shopping_list.csv", item)
+
 
     
 """ 
