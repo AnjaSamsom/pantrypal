@@ -36,23 +36,7 @@ def use_up():
 
     return result
 
-""" def add():
-    file = open("shopping_list.csv", "r")
-    shopping_list = list(csv.reader(file, delimiter=","))[0]
-    file = open("data.csv", "r")
-    data = list(csv.reader(file, delimiter=","))[0]
-    result = []
 
-    for word in data:
-        result.append(word)
-
-    file = open("shopping_list.csv", "a")
-    for word in result:
-        file.write(word + ",")
-
-    file.close()
-
-    return result """
 
 
 def add_no_duplicates(filename, text):
@@ -121,32 +105,7 @@ def add_remaining_ingredients(recipe):
         add_no_duplicates("shopping_list.csv", item)
 
 
-    
-""" 
-def load_pantry():
-    file = open("pantry.csv", "r")
-    data = list(csv.reader(file, delimiter=","))[0]
-    return data
 
-def load_recipe():
-    recipes = ["chicken_marsala_pasta", "fried_rice", "salmon", "beef_tacos"]
-    for num in range(len(recipes)):
-        print(str(num) + ": " + recipes[num])
-    print("Please select a recipe: ")
-    choice = int(input())
-    recipe = recipes[choice]
-
-    file = open(recipe+".csv", "r")
-    data = list(csv.reader(file, delimiter=","))[0]
-
-    return data
-    
-
-
-
-def add_to_list(ingredient):
-    file = open("shopping_list.csv", "a")
-    file.write(ingredient+",")
-    file.close() """
+ 
 
 main()

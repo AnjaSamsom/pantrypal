@@ -5,7 +5,6 @@ app = Flask(__name__)
 
 # note: MVP done 11/13 8:26 am
 
-
 # run this with flask --app app run
 
 @app.route("/", methods=['GET', 'POST'])
@@ -14,7 +13,7 @@ def home():
         submitted_pass = request.form['password']
         submitted_username = request.form['username']
 
-        if (submitted_pass == "samsom" and submitted_username == "anja") or (submitted_pass == "password" and submitted_username == "user"):
+        if submitted_pass == "samsom" and submitted_username == "anja":
             return render_template('home.html', username = submitted_username)
         else:
             return render_template("login.html")
@@ -22,11 +21,11 @@ def home():
     elif request.method == 'GET':
         return render_template('login.html')
     
+    
 @app.route("/home", methods=['GET', 'POST'])
 def homepage():
     return render_template('home.html')
 
-    
 
 @app.route("/fridge", methods=['GET', 'POST'])
 def fridge():
