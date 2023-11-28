@@ -14,8 +14,8 @@ def home():
         submitted_pass = request.form['password']
         submitted_username = request.form['username']
 
-        if submitted_pass == "samsom" and submitted_username == "anja":
-            return render_template('home.html')
+        if (submitted_pass == "samsom" and submitted_username == "anja") or (submitted_pass == "password" and submitted_username == "user"):
+            return render_template('home.html', username = submitted_username)
         else:
             return render_template("login.html")
 
